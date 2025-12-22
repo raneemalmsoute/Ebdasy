@@ -2,15 +2,6 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-/* =========================
-   HELPER: IMPORT ALL IMAGES
-========================= */
-const importAll = (r) =>
-  r.keys().map((key) => ({
-    url: r(key),
-    name: key.replace('./', '').replace(/\.(png|jpg|jpeg|svg)$/, ''),
-  }));
-
 const Clients = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -44,15 +35,22 @@ const Clients = () => {
   const t = content[language];
 
   /* =========================
-     IMPORT IMAGES AUTOMATICALLY
+     CLIENTS DATA (FIXED)
+     ✅ padStart حل مشكلة أول 9 صور
   ========================= */
-  const localClients = importAll(
-    require.context('/assets/LocalClients', false, /\.(png|jpg|jpeg|svg)$/)
-  );
+  const localClients = Array.from({ length: 24 }, (_, i) => ({
+    name: `Local Client ${i + 1}`,
+    url: `/assets/LocalClients/Client-${(i + 1)
+      .toString()
+      .padStart(2, '0')}.png`,
+  }));
 
-  const internationalClients = importAll(
-    require.context('/assets/InternationalClients', false, /\.(png|jpg|jpeg|svg)$/)
-  );
+  const internationalClients = Array.from({ length: 22 }, (_, i) => ({
+    name: `International Client ${i + 1}`,
+    url: `/assets/InternationalClients/Client 2-${(i + 1)
+      .toString()
+      .padStart(2, '0')}.png`,
+  }));
 
   /* =========================
      GRID RENDER
@@ -148,4 +146,4 @@ const Clients = () => {
   );
 };
 
-export default Clients;
+export default Clients; 
