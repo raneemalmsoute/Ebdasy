@@ -144,4 +144,4 @@ const internationalClients = Array.from({ length: 22 }, (_, i) => ({
   );
 };
 
-export default Clients; 
+export default Clients;
