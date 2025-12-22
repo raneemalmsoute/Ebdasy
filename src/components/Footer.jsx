@@ -1,13 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail } from 'lucide-react';
+import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
   const { language } = useLanguage();
 
   const currentYear = new Date().getFullYear();
-  const foundingYear = 2017; // سنة تأسيس الشركة
+  const foundingYear = 2017;
 
   const content = {
     en: {
@@ -17,7 +18,7 @@ const Footer = () => {
       contactTitle: "Contact Info",
       privacy: "Privacy Policy",
       terms: "Terms of Service",
-      navLinks: ['Home', 'About', 'Services', 'Contact', 'Clients'], // Added Clients
+      navLinks: ['Home', 'About', 'Services', 'Contact', 'Clients'],
       services: ['SEO Optimization', 'Social Media', 'Web & App Design & Development', 'Branding', 'Graphic Design','Motion Graphics'],
       contactNumbers: [
         { label: 'DUBAI', number: '+971582553162' },
@@ -34,8 +35,8 @@ const Footer = () => {
       contactTitle: "معلومات الاتصال",
       privacy: "سياسة الخصوصية",
       terms: "شروط الخدمة",
-      navLinks: ['الرئيسية', 'من نحن', 'خدماتنا', 'اتصل بنا', 'عملاؤنا'], // Added عملاؤنا
-      services: ['تحسين محركات البحث', 'التسويق عبر وسائل التواصل', 'تصميم وتطوير المواقع والتطبيقات ', 'الهوية البصرية','التصميم الجرافيكي', 'موشن جرافيك'],
+      navLinks: ['الرئيسية', 'من نحن', 'خدماتنا', 'اتصل بنا', 'عملاؤنا'],
+      services: ['تحسين محركات البحث', 'التسويق عبر وسائل التواصل', 'تصميم وتطوير المواقع والتطبيقات', 'الهوية البصرية','التصميم الجرافيكي', 'موشن جرافيك'],
       contactNumbers: [
         { label: 'دبي', number: '+971582553162' },
         { label: 'سوريا', number: '+963942223337' },
@@ -54,6 +55,12 @@ const Footer = () => {
     if (element) element.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const socialLinks = [
+    { icon: FaFacebook, href: 'https://www.facebook.com/ebda.sy/', label: 'Facebook' },
+    { icon: FaInstagram, href: 'https://www.instagram.com/ebda.sy', label: 'Instagram' },
+    { icon: FaWhatsapp, href: 'https://wa.me/971582553162', label: 'WhatsApp' },
+  ];
+
   return (
     <footer className="bg-gradient-to-b from-[#0d2347] to-[#0A1A3A] border-t border-[#C9A34E]/20 relative overflow-hidden" dir={isRTL ? 'rtl' : 'ltr'}>
       <div className="container mx-auto px-4 py-16 relative z-10">
@@ -70,6 +77,27 @@ const Footer = () => {
               <span className="text-3xl font-bold text-[#C9A34E]">EBDA</span>
             </motion.div>
             <p className="text-[#D5D5D5] mb-6 leading-relaxed">{t.about}</p>
+
+            {/* Social Media with Hover Animation */}
+            <div className={`flex gap-4 ${isRTL ? 'justify-end' : ''}`}>
+              {socialLinks.map((social, idx) => {
+                const Icon = social.icon;
+                return (
+                  <motion.a
+                    key={idx}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                    className="text-[#D5D5D5]"
+                    whileHover={{ scale: 1.2, color: '#C9A34E' }}
+                    transition={{ type: 'spring', stiffness: 300 }}
+                  >
+                    <Icon size={20} />
+                  </motion.a>
+                );
+              })}
+            </div>
           </div>
 
           {/* Quick Links */}
