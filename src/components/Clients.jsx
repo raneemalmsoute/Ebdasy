@@ -40,8 +40,9 @@ const Clients = () => {
   ========================= */
 const localClients = Array.from({ length: 24 }, (_, i) => ({
   name: `Local Client ${i + 1}`,
-  url: `/assets/LocalClients/Client 1-${i}.png`,
+  url: `/assets/LocalClients/Client1-${i}.png`,
 }));
+
 
 const internationalClients = Array.from({ length: 22 }, (_, i) => ({
   name: `International Client ${i + 1}`,
