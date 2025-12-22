@@ -45,12 +45,11 @@ const Clients = () => {
       .padStart(2, '0')}.png`,
   }));
 
-  const internationalClients = Array.from({ length: 22 }, (_, i) => ({
-    name: `International Client ${i + 1}`,
-    url: `/assets/InternationalClients/Client 2-${(i + 1)
-      .toString()
-      .padStart(2, '0')}.png`,
-  }));
+const internationalClients = Array.from({ length: 22 }, (_, i) => ({
+  name: `International Client ${i + 1}`,
+  url: `/assets/InternationalClients/Client 2-${i}.png`,
+}));
+
 
   /* =========================
      GRID RENDER
