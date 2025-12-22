@@ -66,11 +66,12 @@ const Header = () => {
         
         {/* Logo Section */}
         <div className="flex items-center gap-3 z-20 cursor-pointer" onClick={() => scrollToSection('hero')}>
-          <img 
-            src="https://horizons-cdn.hostinger.com/4b93ae44-62aa-4506-bdb0-062bb39333e5/ded8be3262883a06bb7c11ffc3f57c1f.png" 
-            alt="EBDA Logo" 
-            className="h-10 w-auto"
-          />
+<img
+  src="/assets/loading_screen/EBDA Logo-01.png"
+  alt="EBDA Logo"
+  className="h-10 w-auto"
+/>
+
           <span className="text-[#C9A34E] text-2xl font-bold tracking-wider">EBDA</span>
         </div>
 
