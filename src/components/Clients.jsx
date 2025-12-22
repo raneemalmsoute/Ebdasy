@@ -43,7 +43,6 @@ const localClients = Array.from({ length: 24 }, (_, i) => ({
   url: `/assets/LocalClients/Client 1-${i}.png`,
 }));
 
-
 const internationalClients = Array.from({ length: 22 }, (_, i) => ({
   name: `International Client ${i + 1}`,
   url: `/assets/InternationalClients/Client 2-${i}.png`,
