@@ -38,12 +38,11 @@ const Clients = () => {
      CLIENTS DATA (FIXED)
      ✅ padStart حل مشكلة أول 9 صور
   ========================= */
-  const localClients = Array.from({ length: 24 }, (_, i) => ({
-    name: `Local Client ${i + 1}`,
-    url: `/assets/LocalClients/Client-${(i + 1)
-      .toString()
-      .padStart(2, '0')}.png`,
-  }));
+const localClients = Array.from({ length: 24 }, (_, i) => ({
+  name: `Local Client ${i + 1}`,
+  url: `/assets/LocalClients/Client 1-${i}.png`,
+}));
+
 
 const internationalClients = Array.from({ length: 22 }, (_, i) => ({
   name: `International Client ${i + 1}`,
