@@ -53,14 +53,17 @@ const AppointmentBooking = () => {
       footer:
         "No payment required · Online meeting · Limited availability",
       services: [
-        "SEO Optimization",
-        "Social Media Marketing",
-        "Content Creation",
-        "Branding",
-        "Web Design",
-        "Paid Advertising",
-        "Motion Graphics",
-      ],
+  "SEO Optimization",
+  "Social Media Marketing",
+  "Content Creation",
+  "Motion & Graphic Design",
+  "Branding",
+  "Software Development",
+  "Paid Advertising",
+  "Printing & Production",
+  "Event Management & Organization",
+],
+
     },
     ar: {
       subtitle: "حجز موعد",
@@ -89,14 +92,17 @@ const AppointmentBooking = () => {
       footer:
         "لا يوجد أي دفع · اجتماع أونلاين · عدد محدود يومياً",
       services: [
-        "تحسين محركات البحث",
-        "التسويق عبر وسائل التواصل",
-        "صناعة المحتوى",
-        "الهوية البصرية",
-        "تصميم المواقع",
-        "الإعلانات الممولة",
-        "موشن جرافيك",
-      ],
+  "تحسين محركات البحث",
+  "التسويق عبر وسائل التواصل",
+  "صناعة المحتوى",
+  "التصميم الجرافيكي والموشن",
+  "الهوية البصرية",
+  "تطوير البرمجيات",
+  "الإعلانات الممولة",
+  "الطباعة والإنتاج",
+  "إدارة وتنظيم الفعاليات",
+],
+
     },
   };
 
