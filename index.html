@@ -3,34 +3,64 @@
   <head>
     <meta charset="UTF-8" />
 
-    <!-- Google Search Console Verification -->
-    <meta
-      name="google-site-verification"
-      content="AxIeH9ON0hPemIyih3AqzO10ta0SqF7shf3G09OjxRQ"
-    />
-
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/seo/ebda-og.jpg" />
 
     <!-- Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ========================= -->
-    <!-- SEO (Primary - English) -->
-    <!-- ========================= -->
-    <title>EBDA Marketing Agency | Building Brands That Lead</title>
+    <!-- Google Verification -->
     <meta
-      name="description"
-      content="EBDA is a premium marketing agency in Damascus offering branding, digital marketing, software development, printing, and event management solutions."
+      name="google-site-verification"
+      content="AxIeH9ON0hPemIyih3AqzO10ta0SqF7shf3G09OjxRQ"
     />
-    <meta
-      name="keywords"
-      content="EBDA, marketing agency Syria, branding agency Damascus, digital marketing, SEO, social media marketing, software development, printing, event management"
-    />
-    <meta name="author" content="EBDA Marketing Agency" />
 
     <!-- ========================= -->
-    <!-- Open Graph (EN) -->
+    <!-- SEO PRIMARY -->
+    <!-- ========================= -->
+    <title>
+      EBDA Marketing Agency | Branding, Digital Marketing & Events in Syria & Gulf
+    </title>
+
+    <meta
+      name="description"
+      content="EBDA Marketing Agency in Damascus provides branding, digital marketing, SEO, social media, software development, printing, and event management services across Syria and the Gulf."
+    />
+
+    <meta
+      name="keywords"
+      content="
+      EBDA,
+      EBDA Marketing Agency,
+      marketing agency Syria,
+      marketing agency Damascus,
+      branding agency Syria,
+      digital marketing Syria,
+      SEO Syria,
+      social media marketing Syria,
+      event management Syria,
+      printing services Syria,
+      marketing agency Gulf,
+      marketing agency Dubai,
+      branding agency Gulf,
+      EBDA Syria,
+      وكالة ابدأ للتسويق,
+      شركة تسويق سوريا,
+      شركة تسويق دمشق,
+      شركة تسويق الخليج,
+      تسويق رقمي سوريا,
+      تحسين محركات البحث سوريا,
+      إدارة فعاليات سوريا
+      "
+    />
+
+    <meta
+      name="author"
+      content="Saleh Sukkar, Ammar Alkurdi, صالح سكر, عمار الكردي"
+    />
+
+    <!-- ========================= -->
+    <!-- Open Graph EN -->
     <!-- ========================= -->
     <meta property="og:title" content="EBDA Marketing Agency" />
     <meta
@@ -45,9 +75,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
 
-    <!-- ========================= -->
     <!-- Open Graph Arabic -->
-    <!-- ========================= -->
     <meta property="og:locale:alternate" content="ar_AR" />
     <meta property="og:title" content="وكالة ابدأ للتسويق" />
     <meta
@@ -55,25 +83,57 @@
       content="نبني علامات تجارية رائدة عبر الاستراتيجية، الإبداع، والتقنية."
     />
 
-    <!-- ========================= -->
     <!-- Twitter -->
-    <!-- ========================= -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:image"
       content="https://ebda-sy.com/assets/seo/ebda-og.jpg"
     />
 
-    <!-- ========================= -->
-    <!-- Language Targeting -->
-    <!-- ========================= -->
+    <!-- Hreflang -->
     <link rel="alternate" hreflang="en" href="https://ebda-sy.com/" />
     <link rel="alternate" hreflang="ar" href="https://ebda-sy.com/" />
     <link rel="alternate" hreflang="x-default" href="https://ebda-sy.com/" />
+
+    <!-- ========================= -->
+    <!-- Structured Data -->
+    <!-- ========================= -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MarketingAgency",
+        "name": "EBDA Marketing Agency",
+        "alternateName": "وكالة ابدأ للتسويق",
+        "url": "https://ebda-sy.com",
+        "logo": "https://ebda-sy.com/assets/seo/ebda-og.jpg",
+        "image": "https://ebda-sy.com/assets/seo/ebda-og.jpg",
+        "founders": [
+          {
+            "@type": "Person",
+            "name": "Saleh Sukkar",
+            "alternateName": "صالح سكر"
+          },
+          {
+            "@type": "Person",
+            "name": "Ammar Alkurdi",
+            "alternateName": "عمار الكردي"
+          }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Damascus",
+          "addressCountry": "SY"
+        },
+        "areaServed": ["SY", "AE", "SA", "QA", "KW"],
+        "sameAs": [
+          "https://www.facebook.com/ebda.sy/",
+          "https://www.instagram.com/ebda.sy"
+        ]
+      }
+    </script>
   </head>
 
   <body>
-    <!-- Direction & language handled dynamically by React -->
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
