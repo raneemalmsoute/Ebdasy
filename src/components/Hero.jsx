@@ -46,6 +46,17 @@ const Hero = () => {
       dir={isRTL ? "rtl" : "ltr"}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
+      {/* ========================= */}
+      {/* SEO H1 (Hidden for Google) */}
+      {/* ========================= */}
+      <h1 className="sr-only">
+        EBDA Marketing Agency in Damascus Syria – Branding, Digital Marketing,
+        Software Development, Printing & Event Management Company serving Syria
+        and the Gulf. Founded by Saleh Sukkar and Ammar Alkurdi. وكالة ابدأ
+        للتسويق في دمشق سوريا – هوية بصرية، تسويق رقمي، تطوير برمجيات، طباعة
+        وتنظيم فعاليات. تأسيس صالح سكر وعمار الكردي
+      </h1>
+
       {/* Background glow */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#C9A34E] rounded-full blur-[120px]" />
@@ -68,8 +79,8 @@ const Hero = () => {
             </span>
           </motion.div>
 
-          {/* Title */}
-          <motion.h1
+          {/* Visual Title */}
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -79,7 +90,6 @@ const Hero = () => {
             <span className="text-[#C9A34E]">{t.titleHighlight}</span>{" "}
             {!isRTL && <span className="text-white">That</span>}
 
-            {/* Highlighted Ending */}
             <span className="relative inline-block text-[#C9A34E] mt-2">
               <span className="relative z-10 block leading-tight">
                 {t.titleEnd}
@@ -90,7 +100,7 @@ const Hero = () => {
                 } bottom-[0.15em] w-full h-[0.18em] bg-[#C9A34E]/30 rounded-sm`}
               />
             </span>
-          </motion.h1>
+          </motion.h2>
 
           {/* Description */}
           <motion.p
@@ -102,7 +112,7 @@ const Hero = () => {
             {t.description}
           </motion.p>
 
-          {/* CTA + Micro-copy */}
+          {/* CTA */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
