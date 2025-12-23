@@ -11,7 +11,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -38,9 +38,10 @@ const Header = () => {
         { name: 'About', id: 'about' },
         { name: 'Service', id: 'services' },
         { name: 'Contacts', id: 'contact' },
-        { name: 'Clients', id: 'clients' }, // Added Clients
+        { name: 'Clients', id: 'clients' },
       ],
-      bookBtn: 'Book Appointment'
+      bookBtn: 'Book Appointment',
+      tagline: 'Crafting Excellence in Marketing'
     },
     ar: {
       nav: [
@@ -48,9 +49,10 @@ const Header = () => {
         { name: 'من نحن', id: 'about' },
         { name: 'خدماتنا', id: 'services' },
         { name: 'اتصل بنا', id: 'contact' },
-        { name: 'عملاؤنا', id: 'clients' }, // Added عملاؤنا
+        { name: 'عملاؤنا', id: 'clients' },
       ],
-      bookBtn: 'حجز موعد'
+      bookBtn: 'حجز موعد',
+      tagline: 'نصنع التميز في التسويق'
     }
   };
 
@@ -59,21 +61,32 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-[#0A1A3A]/95 backdrop-blur-sm shadow-md py-3' : 'bg-transparent py-5'
+        isScrolled
+          ? 'bg-[#0A1A3A]/95 backdrop-blur-sm shadow-md py-3'
+          : 'bg-transparent py-5'
       }`}
     >
       <div className="container mx-auto px-4 md:px-8 relative flex items-center justify-between">
-        
-        {/* Logo Section */}
-        <div className="flex items-center gap-3 z-20 cursor-pointer" onClick={() => scrollToSection('hero')}>
-<img
-  src="/assets/logoheader/EBDALogo.png"
-  alt="EBDA Logo"
-  className="h-10 w-auto"
-/>
 
+        {/* Logo + Tagline */}
+        <div
+          className="flex flex-col leading-tight z-20 cursor-pointer"
+          onClick={() => scrollToSection('hero')}
+        >
+          <div className="flex items-center gap-3">
+            <img
+              src="/assets/logoheader/EBDALogo.png"
+              alt="EBDA Logo"
+              className="h-10 w-auto"
+            />
+            <span className="text-[#C9A34E] text-2xl font-bold tracking-wider">
+              EBDA
+            </span>
+          </div>
 
-          <span className="text-[#C9A34E] text-2xl font-bold tracking-wider">EBDA</span>
+          <span className="text-xs text-white/70 tracking-wide mt-1">
+            {t.tagline}
+          </span>
         </div>
 
         {/* Desktop Navigation */}
@@ -91,9 +104,10 @@ const Header = () => {
 
         {/* Right Actions */}
         <div className="hidden lg:flex items-center gap-4 z-20">
-          <button 
+          <button
             onClick={toggleLanguage}
             className="flex items-center gap-2 text-white hover:text-[#C9A34E] transition-colors font-medium px-2 py-1"
+            aria-label="Toggle language"
           >
             <Globe size={18} />
             {language === 'en' ? 'AR' : 'EN'}
@@ -109,12 +123,13 @@ const Header = () => {
 
         {/* Mobile Toggle */}
         <div className="lg:hidden flex items-center gap-4 z-20">
-           <button 
+          <button
             onClick={toggleLanguage}
             className="text-white hover:text-[#C9A34E] transition-colors font-medium"
           >
             {language === 'en' ? 'AR' : 'EN'}
           </button>
+
           <button
             className="text-white p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -144,6 +159,7 @@ const Header = () => {
                   </button>
                 ))}
               </nav>
+
               <Button
                 onClick={() => {
                   handleBookAppointment();
@@ -156,6 +172,7 @@ const Header = () => {
             </motion.div>
           )}
         </AnimatePresence>
+
       </div>
     </header>
   );
