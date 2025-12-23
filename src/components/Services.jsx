@@ -8,7 +8,9 @@ import {
   Globe,
   DollarSign,
   Video,
-  PenTool
+  PenTool,
+  Printer,
+  Calendar
 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -48,9 +50,9 @@ const Services = () => {
         },
         {
           icon: PenTool,
-          title: 'Graphic Design',
+          title: 'Motion & Graphic Design',
           description:
-            'Creative visual designs including social media posts, banners, brochures, and marketing materials.',
+            'Creative visual designs and motion content that bring your brand to life across all platforms',
           color: 'from-indigo-500 to-indigo-600'
         },
         {
@@ -62,7 +64,7 @@ const Services = () => {
         },
         {
           icon: Globe,
-          title: 'Web & App Design & Development',
+          title: 'Software Development',
           description:
             'We design and develop beautiful, responsive websites and mobile applications that deliver exceptional user experiences.',
           color: 'from-green-500 to-green-600'
@@ -74,11 +76,20 @@ const Services = () => {
             'Maximize ROI with targeted ad campaigns across Google, Facebook, and Instagram.',
           color: 'from-yellow-500 to-yellow-600'
         },
+        
+        
         {
-          icon: Video,
-          title: 'Motion Graphics',
+          icon: Printer,
+          title: 'Printing & Production',
           description:
-            'Eye-catching animations and videos that bring your brand to life.',
+            'High-quality printing and production services for all marketing and branding materials.',
+          color: 'from-orange-500 to-orange-600'
+        },
+        {
+          icon: Calendar,
+          title: 'Event Management & Organization',
+          description:
+            'End-to-end event planning and execution that creates memorable brand experiences.',
           color: 'from-red-500 to-red-600'
         }
       ]
@@ -114,9 +125,9 @@ const Services = () => {
         },
         {
           icon: PenTool,
-          title: 'التصميم الجرافيكي',
+          title: 'التصميم الجرافيكي والرسوم المتحركة',
           description:
-            'تصاميم بصرية إبداعية تشمل منشورات السوشيال ميديا، البنرات، البروشورات، والمواد التسويقية.',
+            'تصاميم بصرية ومحتوى موشن إبداعي يحيي علامتك التجارية ويعزز حضورها عبر جميع المنصات.',
           color: 'from-indigo-500 to-indigo-600'
         },
         {
@@ -128,7 +139,7 @@ const Services = () => {
         },
         {
           icon: Globe,
-          title: 'تصميم وتطوير المواقع والتطبيقات',
+          title: 'تطوير البرمجيات',
           description:
             'نقوم بتصميم وتطوير مواقع إلكترونية وتطبيقات موبايل جميلة ومتجاوبة تقدم تجربة مستخدم استثنائية',
           color: 'from-green-500 to-green-600'
@@ -141,12 +152,21 @@ const Services = () => {
           color: 'from-yellow-500 to-yellow-600'
         },
         {
-          icon: Video,
-          title: 'موشن جرافيك',
-          description:
-            'رسوم متحركة وفيديوهات خاطفة للأنظار تبث الحياة في علامتك التجارية.',
-          color: 'from-red-500 to-red-600'
-        }
+  icon: Printer,
+  title: 'الطباعة والإنتاج',
+  description:
+    'خدمات طباعة وإنتاج عالية الجودة لكافة المواد التسويقية والعلامات التجارية.',
+  color: 'from-orange-500 to-orange-600'
+},
+{
+  icon: Calendar,
+  title: 'إدارة وتنظيم الفعاليات',
+  description:
+    'تخطيط وتنفيذ الفعاليات من البداية حتى النهاية لصناعة تجارب علامة تجارية لا تُنسى.',
+  color: 'from-red-500 to-red-600'
+}
+
+       
       ]
     }
   };
