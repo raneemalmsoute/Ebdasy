@@ -19,7 +19,18 @@ const Footer = () => {
       privacy: "Privacy Policy",
       terms: "Terms of Service",
       navLinks: ['Home', 'About', 'Services', 'Contact', 'Clients'],
-      services: ['SEO Optimization', 'Social Media', 'Web & App Design & Development', 'Branding', 'Graphic Design','Motion Graphics'],
+      services: [
+  'SEO Optimization',
+  'Social Media Marketing',
+  'Content Creation',
+  'Motion & Graphic Design',
+  'Branding',
+  'Software Development',
+  'Paid Advertising',
+  'Printing & Production',
+  'Event Management & Organization'
+],
+
       contactNumbers: [
         { label: 'DUBAI', number: '+971582553162' },
         { label: 'SYRIA', number: '+963942223337' },
@@ -36,7 +47,17 @@ const Footer = () => {
       privacy: "سياسة الخصوصية",
       terms: "شروط الخدمة",
       navLinks: ['الرئيسية', 'من نحن', 'خدماتنا', 'اتصل بنا', 'عملاؤنا'],
-      services: ['تحسين محركات البحث', 'التسويق عبر وسائل التواصل', 'تصميم وتطوير المواقع والتطبيقات', 'الهوية البصرية','التصميم الجرافيكي', 'موشن جرافيك'],
+services: [
+  'تحسين محركات البحث',
+  'التسويق عبر وسائل التواصل',
+  'صناعة المحتوى',
+  'التصميم الجرافيكي والموشن',
+  'الهوية البصرية',
+  'تطوير البرمجيات',
+  'الإعلانات الممولة',
+  'الطباعة والإنتاج',
+  'إدارة وتنظيم الفعاليات'
+],
       contactNumbers: [
         { label: 'دبي', number: '+971582553162' },
         { label: 'سوريا', number: '+963942223337' },
