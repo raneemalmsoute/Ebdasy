@@ -3,10 +3,11 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: "/", // مهم جداً لـ Netlify
+  // مهم جداً لـ Netlify و SPA
+  base: "/",
 
   plugins: [
-    react()
+    react(),
   ],
 
   resolve: {
@@ -20,14 +21,22 @@ export default defineConfig({
     outDir: "dist",
     assetsDir: "assets",
     sourcemap: false,
+
+    // يمنع مشاكل MIME و module script
     rollupOptions: {
       output: {
-        manualChunks: undefined, // يمنع مشاكل MIME
+        format: "es",
+        manualChunks: undefined,
       },
     },
   },
 
   server: {
     cors: true,
+  },
+
+  preview: {
+    port: 4173,
+    strictPort: true,
   },
 });
