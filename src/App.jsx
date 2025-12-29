@@ -14,6 +14,7 @@ import LoadingScreen from "@/components/LoadingScreen";
 import { Toaster } from "@/components/ui/toaster";
 import { LanguageProvider, useLanguage } from "@/contexts/LanguageContext";
 
+/* ================= SEO COMPONENT ================= */
 function SEO() {
   const { language } = useLanguage();
 
@@ -22,26 +23,29 @@ function SEO() {
       title:
         "EBDA Marketing Agency | Branding, SEO & Digital Marketing in Syria & Gulf",
       description:
-        "EBDA is a premium marketing agency in Damascus, Syria offering SEO, branding, social media marketing, web & software development, printing and event management. Founded by Saleh Sukkar & Ammar Alkurdi.",
+        "EBDA is a premium marketing agency in Damascus, Syria offering SEO, branding, social media marketing, web & software development, printing and event management.",
       keywords:
-        "EBDA, marketing agency Syria, digital marketing Damascus, SEO Syria, branding agency, marketing Gulf, Saleh Sukkar, Ammar Alkurdi",
+        "EBDA, marketing agency Syria, digital marketing Damascus, SEO Syria, branding agency",
     },
     ar: {
       title: "وكالة ابدأ للتسويق | تسويق رقمي وهوية بصرية في سوريا والخليج",
       description:
-        "وكالة ابدأ للتسويق في دمشق تقدم خدمات تحسين محركات البحث، التسويق الرقمي، الهوية البصرية، تطوير البرمجيات، الطباعة وتنظيم الفعاليات. تأسيس صالح سكر وعمار الكردي.",
+        "وكالة ابدأ للتسويق في دمشق تقدم خدمات تحسين محركات البحث، التسويق الرقمي، الهوية البصرية، تطوير البرمجيات، الطباعة وتنظيم الفعاليات.",
       keywords:
-        "ابدأ, وكالة تسويق سوريا, تسويق رقمي دمشق, سيو سوريا, هوية بصرية, صالح سكر, عمار الكردي",
+        "ابدأ, وكالة تسويق سوريا, تسويق رقمي دمشق, سيو سوريا, هوية بصرية",
     },
   };
 
   return (
     <Helmet>
+      {/* Basic SEO */}
       <title>{seo[language].title}</title>
       <meta name="description" content={seo[language].description} />
       <meta name="keywords" content={seo[language].keywords} />
-
       <link rel="canonical" href="https://ebda-sy.com/" />
+
+      {/* Favicon */}
+      <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
 
       {/* Open Graph */}
       <meta property="og:title" content={seo[language].title} />
@@ -68,13 +72,12 @@ function SEO() {
   );
 }
 
+/* ================= MAIN APP ================= */
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
+    const timer = setTimeout(() => setIsLoading(false), 3000);
     return () => clearTimeout(timer);
   }, []);
 
