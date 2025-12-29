@@ -45,7 +45,12 @@ function SEO() {
       <link rel="canonical" href="https://ebda-sy.com/" />
 
       {/* Favicon */}
-      <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
+     <link
+  rel="icon"
+  type="image/png"
+  sizes="64x64"
+  href="/assets/favicon/favicon.png"
+/>
 
       {/* Open Graph */}
       <meta property="og:title" content={seo[language].title} />
